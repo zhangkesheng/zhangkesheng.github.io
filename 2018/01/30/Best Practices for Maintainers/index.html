@@ -1,0 +1,137 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>维护者的最佳实践 | 张克升的个人博客</title><link rel="stylesheet" type="text/css" href="//fonts.neworld.org/css?family=Source+Code+Pro"><link rel="stylesheet" type="text/css" href="/css/style.css?v=2.0.1"><link rel="stylesheet" type="text/css" href="/css/highlight.css?v=2.0.1"><link rel="Shortcut Icon" href="/favicon.ico"><link rel="bookmark" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">维护者的最佳实践</h1><a id="logo" href="/.">张克升的个人博客</a><p class="description">不想当架构师的工程师不是好的程序员</p></div><div id="nav-menu"><a href="/." class="current"><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a></div><div id="search-form"><div id="result-mask" class="hide"></div><label><input id="search-key" type="text" autocomplete="off" placeholder="Arama"></label><div id="result-wrap" class="hide"><div id="search-result"></div></div><div class="hide"><template id="search-tpl"><div class="item"><a href="/{path}" title="{title}"><div class="title">{title}</div><div class="time">{date}</div><div class="tags">{tags}</div></a></div></template></div></div></div><div id="layout" class="layout-g"><div class="layout-l"><div class="content_container"><div class="post"><h1 class="post-title">维护者的最佳实践</h1><div class="post-meta"><a href="/2018/01/30/Best Practices for Maintainers/#comments" class="comment-count"></a><p><span class="date">Jan 30, 2018</span><span><i id="busuanzi_container_page_pv"><i id="busuanzi_value_page_pv"></i><i>点击</i></i></span></p></div><div class="post-content"><h1 id="维护者的最佳实践"><a href="#维护者的最佳实践" class="headerlink" title="维护者的最佳实践"></a>维护者的最佳实践</h1><blockquote>
+<p>原文地址: <a href="https://opensource.guide/best-practices/" target="_blank" rel="external">https://opensource.guide/best-practices/</a></p>
+</blockquote>
+<p><em>作为开源维护者, 通过记录流程到充分利用社区, 可以让你的生活更轻松</em></p>
+<p>[TOC]</p>
+<h2 id="1-成为一个维护者意味着什么"><a href="#1-成为一个维护者意味着什么" class="headerlink" title="1.  成为一个维护者意味着什么"></a>1.  成为一个维护者意味着什么</h2><p>如果你维护者一个大量用户使用, 你可能已经意识到你现在已经很少去编码, 而会花大量时间去回复issues.</p>
+<p>在一个项目的初期, 你会去尝试许多新的点子, 并且根据你想要什么去做决定. 随着你的项目知名度越来越高, 你会发现你更多的时候是为你的使用者和贡献者工作.</p>
+<p>维护一个项目需要的不仅仅是编码. 有些任务常常是出乎意料的, 但他们又对一个成长中的项目非常重要. 我们收集了一些方法是你的生活更加轻松, 从记录流程到充分利用社区资源</p>
+<h2 id="2-记录你的流程"><a href="#2-记录你的流程" class="headerlink" title="2.  记录你的流程"></a>2.  记录你的流程</h2><p><em>把事情记录下来是作为一个维护者能够做的最重要的一件事情</em></p>
+<p>文档不仅可以阐明你自己的事情, 也可以帮助其他人在询问你之前了解你需要或期望的东西.</p>
+<p>写文档可以让你更容易的拒绝一些不适合项目的东西. 也可以让其他人更容易参与帮助你的项目. 你永远不可能知道谁在阅读或使用你的项目.</p>
+<p>即使你不写出完整的文档, 记录下重点也比什么都不写好很多.</p>
+<p>记住及时更新你的文档. 如果你不能一直这样做, 请删除过期的文档或指出已过时, 以便贡献者了解更新.</p>
+<h3 id="写下你的项目的愿景"><a href="#写下你的项目的愿景" class="headerlink" title="写下你的项目的愿景"></a>写下你的项目的愿景</h3><p>首先写下你的项目的目标. 把它们添加进<code>README</code>中, 或者创建一个名为<code>VISION</code>的单独的文件. 如果有其他需要帮助的部分, 例如项目流程图, 最后也公开这些东西.</p>
+<p>拥有一个清晰的, 文档化的愿景可以让你专注, 并且帮助你避免他人的贡献中的’范围蔓延’.</p>
+<p>例如, lord发现拥有一个项目愿景帮助他弄清楚哪些需求需要花费时间. 作为一个新的维护者, 他后悔当他接到第一个<a href="https://github.com/lord/slate" target="_blank" rel="external">Slate</a>功能需求的时候没有坚持自己的项目范围.</p>
+<blockquote>
+<p>我摸索了它, 我没有努力的想出一个完整的解决方案. 我希望我曾经说过’我现在没有时间做这件事, 但我会把他加进长期的目标列表中’, 而不是一个半途而废的解决方法.     —- <a href="https://github.com/lord" target="_blank" rel="external">@lord</a></p>
+</blockquote>
+<h3 id="沟通你的期望"><a href="#沟通你的期望" class="headerlink" title="沟通你的期望"></a>沟通你的期望</h3><p>写下这些规则是很伤脑筋的. 有时候你可能觉得你在监督别人的行为或者扼杀所有的乐趣.</p>
+<p>然而, 编写和执行良好的规则可以增强维护人员的能力. 它们阻止你去做你不想做的事情.</p>
+<p>大部分看到你项目的人都不知道你和你的情况. 他们可能假设你得到报酬, 特别是他们经常使用和依赖的东西. 也许在某个时间, 你花费大量的时间在你的项目上, 但是现在你正忙于一份新的工作或者家庭成员.</p>
+<p>所有的这一切都很完美! 只要确保其他人知道就行了.</p>
+<p>如果维护你的项目是兼职或者纯粹资源的, 要诚实的告知别人你有多少时间. 这与你认为项目需要花费多少时间, 或者其他人想让你花费多少时间是不一样的.</p>
+<p>这里有一些值得写下来的规则: </p>
+<ul>
+<li>如何评估和接受贡献(是否需要测试?问题模板)</li>
+<li>你接受什么类型的贡献(你是否只希望得到部分的代码帮助)</li>
+<li>什么时候适合跟进(例如, 你可以期望维护人在7天之内回应, 如果你到那时还没有听到任何消息, 那就自由的去做吧)</li>
+<li>你在这个项目上会花费多少时间(例如, 我们平均每个星期只花费5个小时在这个项目上)</li>
+</ul>
+<p><a href="https://github.com/jekyll/jekyll/tree/master/docs" target="_blank" rel="external">Jekyll</a>, <a href="https://github.com/CocoaPods/CocoaPods/wiki/Communication-&amp;-Design-Rules" target="_blank" rel="external">CocoaPods</a>, 和<a href="https://github.com/Homebrew/brew/blob/bbed7246bc5c5b7acb8c1d427d10b43e090dfd39/docs/Maintainers-Avoiding-Burnout.md" target="_blank" rel="external">Homebrew</a> 是几个项目的例子, 它们为维护人员和贡献者提供了基本规则.</p>
+<h3 id="保持沟通公开"><a href="#保持沟通公开" class="headerlink" title="保持沟通公开"></a>保持沟通公开</h3><p>也不要忘记及时记录你的沟通记录. 不论你再哪里, 都要保持你的项目公开, 如果有人想要私下和你联系讨论某个功能请求或需求支持, 礼貌的将他引导公共的沟通渠道中, 比如邮件列表或issue tracker(问题追踪器)</p>
+<p>如果你想要和其他维护者会面, 或者私下做出一些重大决定, 在公开场合发布这些对话, 即使只是发布一些你的笔记.</p>
+<p>这样, 任何加入你的社区的人都可以获得和那些已经在那里多年的人相同的信息.</p>
+<h2 id="3-学会说NO"><a href="#3-学会说NO" class="headerlink" title="3. 学会说NO"></a>3. 学会说NO</h2><p><em>你已经记录下了一些的事情. 理想情况下, 每个人都会阅读你的文档, 但实际上, 你必须提醒其他人, 这些知识是存在的</em></p>
+<p>把一些都写下来, 不论如何, 它将在你需要执行你的规则的时候帮你个性化解决方案.</p>
+<p>说’不’并不有趣, 但’我不喜欢你的贡献’不如’你的项目不符合这个项目的标准’.</p>
+<p>说’不’适用于许多你会遇到的维护者: 那些不符合范围的特性请求, 有人破坏了讨论, 对其他人做了不必要的工作.</p>
+<h3 id="保持对话友好"><a href="#保持对话友好" class="headerlink" title="保持对话友好"></a>保持对话友好</h3><p>你要练习说’不’的最重要的地方之一就是你的issue和pull request. 作为一个项目维护者, 你将不可避免地收到你不想接受的建议.</p>
+<p>也许这个贡献改变了你项目的范围或不符合你的愿景. 或者这个想法很好, 但是实现很糟糕.</p>
+<p>无论什么原因, 都有可能巧妙地处理那些不符合项目标准的贡献.</p>
+<p>如果你收到了一个你不想接受的贡献, 你的第一反应可能是忽略或者假装没有看到. 这样做会伤害别人的感情, 甚至会使你所在社区的其他潜在贡献者失去动力.</p>
+<blockquote>
+<p>为大型开源项目提供支持的关键是保持问题的进展. 尽量避免出现问题. 如果你是一个iOS开发者, 你知道提交雷达是多么令人沮丧. 你可能会在两年后听到, 并被告知尝试使用最新版本的iOS    —- <a href="https://github.com/KrauseFx" target="_blank" rel="external">@KrauseFx</a></p>
+</blockquote>
+<p>不要因为内疚或想要友善而对你不想要的贡献置之不理. 随着时间的推移, 你没有回复的issues和PRs将使你的项目感到压力和威胁.</p>
+<p>最好立即关闭你明确知道你不想接受的贡献. 如果你的项目已经遭受大量积压, <a href="https://github.com/steveklabnik" target="_blank" rel="external">@steveklabnik</a> 对于<a href="http://words.steveklabnik.com/how-to-be-an-open-source-gardener" target="_blank" rel="external">如何有效的分流问题</a>有一些建议.</p>
+<p>其次, 忽略贡献会给你的社区带来一个消极的信号. 对一个项目作出贡献是令人生畏的, 特别是如果这是一些人的第一次. 即使你不接受他们的贡献, 之后也要承认他们, 并感谢他们的关心, 这是一个很大的赞扬!</p>
+<p>如果你不想接受一个贡献:</p>
+<ul>
+<li>感谢他们的贡献</li>
+<li>解释为什么它不符合项目的范围, 并提供明确的改进建议. 如果可以, 尽量亲和一下，但要坚定.</li>
+<li>如果你有文档, 链接到相关文档. 如果您注意到重复的请求, 请将它们添加到文档中, 以避免自己重复工作</li>
+<li>关闭请求</li>
+</ul>
+<p>你不应该需要超过1-2个句子来回应. 例如, 当<a href="https://github.com/celery/celery/" target="_blank" rel="external">celery</a>用户报告与Windows相关的错误时， <a href="https://github.com/berkerpeksag" target="_blank" rel="external">@berkerpeksag</a>回应：</p>
+<p>如果说’不’的想法吓到了你, 你并不孤单. 就像 <a href="https://github.com/jessfraz" target="_blank" rel="external">@jessfraz</a> 说的:</p>
+<blockquote>
+<p>我和几个不同的开源项目, Mesos, Kubernetes, Chrominm谈过, 他们都认为最为维护者, 对于你不想要的不定说’No’是最困难的部分之一.</p>
+</blockquote>
+<p>不要以为不想接受别人的贡献而感觉到内疚. 根据<a href="https://github.com/shykes" target="_blank" rel="external">@shykes</a>的说法, ‘No只是暂时的, Yes才是永久的’. 虽然同求别人的热情是一件好事, 但拒绝一个人的贡献和拒绝一个人的支持是不一样的.</p>
+<p>最后, 如果一个贡献不够好, 你就没有义务去接受他. 当被人对你的项目作出贡献的时候, 你要表现的友善和积极, 但只接受你真正相信的修改会让你的项目更好. 你练习说’不’的次数越多, 它就变得越容易. 真的!</p>
+<h3 id="主动"><a href="#主动" class="headerlink" title="主动"></a>主动</h3><p>为了减少不必要的贡献, 你需要解释在你的贡献指南中说明你的项目提交和接受贡献的过程.</p>
+<p>如果你收到了太多低质量的贡献, 则需要贡献者提前做一些工作, 例如:</p>
+<ul>
+<li>填写issue或者PR的模板/清单</li>
+<li>在PR之前打开一个issue</li>
+</ul>
+<p>如果他们不遵循你的规则, 马上关闭这个issue并指向你的文档.</p>
+<p>虽然这种方法一开始可能有些不友好, 但积极主动实际上对双方都有好处. 它减少了有人将大量浪费的工作时间投入到你不愿意接受的请求. 而且它会让你的工作量更容易管理.</p>
+<blockquote>
+<p>理想情况下，向他们说明并且在CONTRIBUTING.md文件解释他们将来如何在开始工作之前得到更好的指示     —- <a href="https://github.com/mikemcquaid" target="_blank" rel="external">@mikemcquaid</a></p>
+</blockquote>
+<p>有时候, 当你说’不’时, 你的潜在贡献者可能会感到不安或批评你的决定. 如果他们的行为变得敌对, 采取措施缓和局势, 或者甚至把他们从你的社区中移除, 如果他们不愿意建设性地合作.</p>
+<h3 id="接受指导"><a href="#接受指导" class="headerlink" title="接受指导"></a>接受指导</h3><p>也许你的社区中的一些人会经常提交一些不符合你项目标准的贡献. 反复的拒绝会让双方都很沮丧.</p>
+<p>如果你看到一些人对你的项目很热情, 但需要一些磨砺, 你要有耐心. 在每个情况下清楚地解释为什么他们的贡献不符合项目的期望. 试着将它们指向一个更容易或更不明确的任务, 比如标记一个问题为’很好的第一个BUG’, 让他们初次尝试. 如果你有时间, 可以考虑通过他们的第一个贡献来指导他们, 或者在你的社区里找到一个愿意指导他们的人.</p>
+<h2 id="4-利用你的社区"><a href="#4-利用你的社区" class="headerlink" title="4. 利用你的社区"></a>4. 利用你的社区</h2><p><em>你不必自己做一切. 你项目的社区存在是有原因的! 即使你还没有一个积极的贡献者社区, 如果你有很多的用户, 让他们工作.</em></p>
+<h3 id="分担工作量"><a href="#分担工作量" class="headerlink" title="分担工作量"></a>分担工作量</h3><p>如果您正在寻找其他人参与, 首先从四周询问.</p>
+<p>当你看到新的贡献者作出重复贡献时, 通过提供更多的责任来认识他们的工作. 如果他们愿意, 记录下他们如何成长为一个领导者.</p>
+<p>鼓励他人分享项目的所有权可以很好的减少你自己的工作量, 就像 <a href="https://github.com/lmccart" target="_blank" rel="external">@lmccart</a>在她的<a href="https://github.com/processing/p5.js?files=1" target="_blank" rel="external">p5.js</a>项目中发现的那样.</p>
+<blockquote>
+<p>我曾说过, ‘是的, 每个人都可以参与, 你不需要拥有很多的编码知识[…]’. 我们让人们来参加(一项活动), 当时我真的很想知道: 这是真的, 我一直在说什么? 会有40个人出现, 而不是我可以和他们每个人坐在一起…但是人们聚在一起, 而且这种工作方式很有效. 一旦有人获得了, 他们就可以教导他们的邻座.</p>
+<p>I’d been saying, “Yeah, anyone can be involved, you don’t have to have a lot of coding expertise […].” We had people sign up to come [to an event] and that’s when I was really wondering: is this true, what I’ve been saying? There are gonna be 40 people who show up, and it’s not like I can sit with each of them…But people came together, and it just sort of worked. As soon as one person got it, they could teach their neighbor.</p>
+</blockquote>
+<p>如果你需要离开你的项目, 不论暂时的还是永久的, 请求别人接管你并不是一件难以启齿的事情.</p>
+<p>如果其他人热衷于它的方向, 给予他们提交的权限或这正式的将控制权转交个某个人. 如果有人fork了你的项目, 并且在非常积极的维护它, 考虑从你原始的项目链接到这个fork的项目. 这对那些希望你的项目维护下去的人是很重要的. </p>
+<p><a href="https://github.com/progrium" target="_blank" rel="external">@progrium</a> 发现, 记录他的项目<a href="https://github.com/dokku/dokku" target="_blank" rel="external">Dokku</a>的愿景, 使得即使他离开了这个项目, 这些目标仍然有人继续下去:</p>
+<blockquote>
+<p>我写了一个wiki描述我的目标和为什么我制定这些目标. 因为一些某些原因, 让我很惊讶的是, 项目的维护者们的开发方向都开始往这个方向偏移. 刚好我做了这些这一切就发生了? 不一定. 但它的确让我的项目跟接近我写下的方向.</p>
+<p>I wrote a wiki page describing what I wanted and why I wanted it. For some reason it came as a surprise to me that the maintainers started moving the project in that direction! Did it happen exactly how I’d do it? Not always. But it still brought the project closer to what I wrote down.</p>
+</blockquote>
+<h3 id="让其他人构建他们需要的解决方案"><a href="#让其他人构建他们需要的解决方案" class="headerlink" title="让其他人构建他们需要的解决方案"></a>让其他人构建他们需要的解决方案</h3><p>如果有一个潜在的贡献者对于你的项目应该怎么做有不同的意见, 你可能需要慢慢的鼓励他们在他们自己fork的项目里操作.</p>
+<p>Fork一个项目不一定是一件坏事. 能够复制和修改项目是关于开源的最好的事情之一. 鼓励你的社区成员自己工作, 可以提供他们需要的创造性的出路, 而不会与你的项目的愿景相冲突.</p>
+<blockquote>
+<p>我迎合80%的用例. 如果你是独角兽之一, 请for我的项目. 我不会生气的! 我的公共项目大部分是要解决公共的问题; 我试图通过分工或扩大工作来让事情变得更加容易.</p>
+<p>​                                                    —-  <a href="https://github.com/geerlingguy" target="_blank" rel="external">@geerlingguy</a>, <a href="https://www.jeffgeerling.com/blog/2016/why-i-close-prs-oss-project-maintainer-notes" target="_blank" rel="external">“Why I Close PRs”</a></p>
+</blockquote>
+<p>同样的道理也适用于那些真正想要解决方案的用户, 因为他们根本没有足够的带宽来构建. 提供一些API和定制的hooks可以帮助其他人满足他们自己的需求, 而不需要直接修改源码. <a href="https://github.com/orta" target="_blank" rel="external">@orta</a> 发现鼓励CocoaPods导致了一些”有趣的想法”:</p>
+<blockquote>
+<p>几乎是不可避免的, 当一个项目变大, 维护者们必须对于如何采用新代码更加谨慎. 你变得擅长说’NO’, 但很多人都有合理的需求. 所以, 反而你最终将你的工具转换成一个平台.</p>
+</blockquote>
+<h2 id="5-带上机器人"><a href="#5-带上机器人" class="headerlink" title="5.带上机器人"></a>5.带上机器人</h2><p>就像其他人帮你做的事情一样, 也有一些不需要人来做的事情. 机器人就是你的朋友. 使用它们可以使你作为一个维护者的生活更容易.</p>
+<h3 id="需要测试和其他的检查来提高你的代码质量"><a href="#需要测试和其他的检查来提高你的代码质量" class="headerlink" title="需要测试和其他的检查来提高你的代码质量"></a>需要测试和其他的检查来提高你的代码质量</h3><p>可以使得的项目自动化最重要的一个方法就是添加测试. </p>
+<p>测试可以使贡献者感到自行, 因为它们不会破坏任何事情. 同时也可以让你快速审查和接受代码变得更容易. 你的反应速度越快, 你的社区就越容易参与.</p>
+<p>设置当贡献者提交代码是跑的自动测试, 并确认你的测试可以让贡献者很轻易的在本地跑起来. 要求所有的代码贡献者在他们提交之前必须通过你的测试. 你将帮助设置一个提交的最低质量标准. Gitlab的<a href="https://help.github.com/articles/about-required-status-checks/" target="_blank" rel="external">状态检查</a>可以帮助你确认没有通过测试的代码不会被合并.</p>
+<p>如果你添加测试, 确保在CONTRIBUTING文件中解释测试如何运行.</p>
+<blockquote>
+<p>我相信在人开发的代码中测试是必须的. 如果代码是完全正确的, 它就不需要被修改–我们只在一些事错误的时候才写代码, 不论是”它崩溃了”或”它没有这样的功能”. 无论你作出什么改变, 测试对于捕捉任何回归或你意外引入的问题都是必须的.                                    —- <a href="https://github.com/edunham" target="_blank" rel="external">@edunham</a>, <a href="https://edunham.net/2016/09/27/rust_s_community_automation.html" target="_blank" rel="external">“Rust’s Community Automation”</a></p>
+</blockquote>
+<h3 id="使用工具自动执行一些基本的维护任务"><a href="#使用工具自动执行一些基本的维护任务" class="headerlink" title="使用工具自动执行一些基本的维护任务"></a>使用工具自动执行一些基本的维护任务</h3><p>关于维护一个受欢迎的项目的好消息是, 有其他的维护者面临过同样的问题, 并构建了一个解决方法. </p>
+<p>有各种<a href="https://github.com/showcases/tools-for-open-source" target="_blank" rel="external">工具</a>可以帮助自动化维护工作的某些方面, 一些例子: </p>
+<ul>
+<li><a href="https://github.com/semantic-release/semantic-release" target="_blank" rel="external">semantic-release</a> 自动发布版本</li>
+<li><a href="https://github.com/facebook/mention-bot" target="_blank" rel="external">mention-bot</a> 提到对PR的潜在审查</li>
+<li><a href="https://github.com/danger/danger" target="_blank" rel="external">Danger</a> 帮助自动化代码审查</li>
+</ul>
+<p>对于bug报告和其他常见的贡献, GitHub有issue模板和PR模板, 你可以创建模板来帮你简化收到的消息. <a href="https://github.com/TalAter" target="_blank" rel="external">@TalAter</a>建了一个<a href="https://www.talater.com/open-source-templates/#/" target="_blank" rel="external">选择你自己的冒险指南</a>来帮助你创建自己的issue模板和PR模板.</p>
+<p>为了管理你的邮件提醒, 你可以设置邮件过滤来根据优先级管理.</p>
+<p>如果你想要更先进一点, 风格指南和linters可以使项目贡献规范化, 并且使得它们更容易审查和接受.</p>
+<p>无论如何, 如果你的规范太复杂, 它们会增加贡献的难度. 确保你只是增加了足够的规则, 让每个人的生活更轻松.</p>
+<p>如果你不确定使用哪些工具, 参考一起其他受欢迎的项目怎么做, 特别是与你类似的醒目. 例如, 其他Node模块的贡献是什么样的? 使用类似的工具和方法也会让你的贡献者更加熟悉你的流程.</p>
+<h2 id="6-可以暂停"><a href="#6-可以暂停" class="headerlink" title="6.可以暂停"></a>6.可以暂停</h2><p>开源项目曾经使你快乐, 也许现在它开始让你感到回避或内疚.</p>
+<p>也许当你想到你的项目时, 你会感到不堪重负或者越来越恐惧, 与此同时, issuses和PRs也堆积如山.</p>
+<p>倦怠是开源工作中一个普遍的问题, 尤其是在维护者中. 作为 一个维护者, 你的幸福对于任何开源项目的生存都是没有商量余地的.</p>
+<p>虽然不用说, 休息一下! 你不应该等到感到脑袋都要烧起来才去休息. <a href="https://github.com/brettcannon" target="_blank" rel="external">@brettcannon</a>, 一个Pathon的核心开发者, 决定在14年的自愿开源软件开发工作后进行为期一个月的假期.</p>
+<p>就像其他任何类型的工作, 定期的休息会让你头脑清晰, 对你工作更开心, 兴奋.</p>
+<blockquote>
+<p>在维护WP-CLI过程中, 我发现我需要是我自己开心, 并为我的参与设置一个清晰的界限. 最好的平衡点是每周2-5小时, 作为我日常工作表的一部分. 这使我的参与变得充满激情, 并感觉很像一份工作. 因为我优先考录我正在处理的问题, 我可以在我认为最重要的事情上定期取的进展. </p>
+<p>​    —- <a href="https://github.com/danielbachhuber" target="_blank" rel="external">@danielbachhuber</a>, <a href="https://runcommand.io/2016/06/26/my-condolences-youre-now-the-maintainer-of-a-popular-open-source-project/" target="_blank" rel="external">“My condolences, you’re now the maintainer of a popular open source project”</a></p>
+</blockquote>
+<p>有时, 当感觉所有人都需要你时, 你很难重开源项目中解脱出来. 人们甚至会试图让你因为离开而感到内疚.</p>
+<p>当你离开一个项目时, 尽最大努力为你的用户和社区寻找支持. 如果你不能找到你需要的支持, 那就休息一下. 你休息时记得保持联系, 这样人们就不会因为你缺乏响应而感到困惑.</p>
+<p>休息也适用于休假. 如果你不想周末或者工作时间做开源项目的工作, 把这些期望告知别人, 这样别人知道在什么时候不打扰你.</p>
+<h2 id="7-先照顾好自己"><a href="#7-先照顾好自己" class="headerlink" title="7.先照顾好自己!"></a>7.先照顾好自己!</h2><p>维护一个受欢迎的项目不同于早起增长技能阶段, 它没有什么回报. 作为一个维护者, 你将在很少人能够体验到的水平上实践领导能力和个人技能. 虽然管理起来不容易, 但要设定清晰的界限, 并且只关心你觉得舒服的事, 会使你保持快乐, 精力充沛和富有成效.</p>
+</div><div class="tags"><a href="/tags/translation/">translation</a></div><div class="post-share"><div class="bdsharebuttonbox"><span style="float:left;line-height: 28px;height: 28px;font-size:16px;font-weight:blod">分享到：</span><a href="#" data-cmd="more" class="bds_more"></a><a href="#" data-cmd="mshare" title="分享到一键分享" class="bds_mshare"></a><a href="#" data-cmd="fbook" title="分享到Facebook" class="bds_fbook"></a><a href="#" data-cmd="twi" title="分享到Twitter" class="bds_twi"></a><a href="#" data-cmd="linkedin" title="分享到linkedin" class="bds_linkedin"></a><a href="#" data-cmd="youdao" title="分享到有道云笔记" class="bds_youdao"></a><a href="#" data-cmd="evernotecn" title="分享到印象笔记" class="bds_evernotecn"></a><a href="#" data-cmd="weixin" title="分享到微信" class="bds_weixin"></a><a href="#" data-cmd="qzone" title="分享到QQ空间" class="bds_qzone"></a><a href="#" data-cmd="tsina" title="分享到新浪微博" class="bds_tsina"></a></div></div><div class="post-nav"><a href="/2018/01/25/kubenetes-docker/" class="next">Kubernetes安装脚本(docker-compose)</a></div><div id="comments"></div></div></div></div><div class="layout-r"><div id="sidebar"><div class="search-pla"></div><div id="toc" class="widget"><div class="widget-title"><i class="fa fa-fei">文章目录</i></div><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#维护者的最佳实践"><span class="toc-text">维护者的最佳实践</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-成为一个维护者意味着什么"><span class="toc-text">1.  成为一个维护者意味着什么</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-记录你的流程"><span class="toc-text">2.  记录你的流程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#写下你的项目的愿景"><span class="toc-text">写下你的项目的愿景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#沟通你的期望"><span class="toc-text">沟通你的期望</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#保持沟通公开"><span class="toc-text">保持沟通公开</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-学会说NO"><span class="toc-text">3. 学会说NO</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#保持对话友好"><span class="toc-text">保持对话友好</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#主动"><span class="toc-text">主动</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#接受指导"><span class="toc-text">接受指导</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-利用你的社区"><span class="toc-text">4. 利用你的社区</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#分担工作量"><span class="toc-text">分担工作量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#让其他人构建他们需要的解决方案"><span class="toc-text">让其他人构建他们需要的解决方案</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-带上机器人"><span class="toc-text">5.带上机器人</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#需要测试和其他的检查来提高你的代码质量"><span class="toc-text">需要测试和其他的检查来提高你的代码质量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用工具自动执行一些基本的维护任务"><span class="toc-text">使用工具自动执行一些基本的维护任务</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-可以暂停"><span class="toc-text">6.可以暂停</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-先照顾好自己"><span class="toc-text">7.先照顾好自己!</span></a></li></ol></li></ol></div><div class="widget"><div class="widget-title"><i class="fa fa-xie"> 最新文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/01/30/Best Practices for Maintainers/">维护者的最佳实践</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/01/25/kubenetes-docker/">Kubernetes安装脚本(docker-compose)</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/01/25/kubernetes-ha/">部署高可用的k8s集群</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/16/Kubernetes-Install/">Kubernetes Install</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/23/first/">第一篇博客</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/23/hello-world/">Hello World</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-biao"> 标签</i></div><div class="tagcloud"><a href="/tags/translation/" style="font-size: 15px;">translation</a> <a href="/tags/无题/" style="font-size: 15px;">无题</a> <a href="/tags/notes/" style="font-size: 15px;">notes</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-archive"> 归档</i></div><ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">一月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">十一月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">八月 2017</a></li></ul></div></div></div></div><a id="totop" href="#top"></a><div id="footer"><div class="footer-info"><p><a href="/baidusitemap.xml">Baidu Site Haritası</a> |  <a href="/atom.xml">订阅</a> |  <a href="/about/">关于</a></p><p>本站总访问量：<i id="busuanzi_container_site_pv"><i id="busuanzi_value_site_pv"></i></i>次</p><p><span> Copyright &copy;<a href="/." rel="nofollow">张克升.</a></span><span> Theme by<a rel="nofollow" target="_blank" href="https://github.com/chaooo/hexo-theme-BlueLake"> BlueLake.</a></span><span> Count by<a href="http://busuanzi.ibruce.info/"> busuanzi.</a></span><span> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a></span></p></div></div></div><script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" async></script><script type="text/javascript" src="/js/search.json.js?v=2.0.1"></script><script type="text/javascript" src="/js/toctotop.js?v=2.0.1" async></script><script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["mshare","weixin","tsina","qzone","linkedin","fbook","twi","print","renren","sqq","evernotecn","bdysc","tqq","tqf","bdxc","kaixin001","tieba","douban","bdhome","thx","ibaidu","meilishuo","mogujie","diandian","huaban","duitang","hx","fx","youdao","sdo","qingbiji","people","xinhua","mail","isohu","yaolan","wealink","ty","iguba","h163","copy"],"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{},"image":{"viewList":["tsina","qzone","weixin","fbook","twi","linkedin","youdao","evernotecn","mshare"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["tsina","qzone","weixin","fbook","twi","linkedin","youdao","evernotecn","mshare"]}};with(document)0[(getElementsByTagName('head')[0]||head).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+</script></body></html>
